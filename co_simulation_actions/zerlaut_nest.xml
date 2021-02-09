@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<settings>
+  <co_simulation_action>
+    <title>NEST Zerlaut simulation model</title>
+    <description>Modeling mesoscopic cortical dynamics</description>
+    <label>simulation</label>
+    <action>
+      <location>${TVB_NEST}/nest_elephant_tvb/Nest/</location>
+      <script>simulation_Zerlaut.py</script>
+      <parameters>
+        <argv_1>0</argv_1> <!-- Setting argv[1] = '0' means only NEST -->
+        <argv_2>cm.PARAMETERS_PATH</argv_2> <!-- parameter.json location -->
+      </parameters>
+    </action>
+  </co_simulation_action>
+</settings>

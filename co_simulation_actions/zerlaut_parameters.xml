@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<settings>
+  <co_simulation_parameters>
+    <title>Zerlaut Parameters Generation</title>
+    <description>Parameters generation to model mesoscopic cortical dynamics</description>
+    <label>parameters</label>
+    <co_simulation>
+      <processess>
+        <!-- this will be assigned to total_num_virtual_procs parameter
+              TODO: check the usage of this value-->
+        <nb_VP>1</nb_VP>
+        <!-- TODO: check the pleonasm with the -n parameter used in the plan XML configuration file -->
+        <nb_mpi>1</nb_mpi>
+      </processess>
+      <recording>
+        <!-- begin: when start the recording simulation
+        (not take in count for tvb (start always to zeros ) -->
+        <begin>0.0</begin>
+        <!-- end: when end the recording simulation and the simulation -->
+        <end>21.0</end>
+      </recording>
+      <co_simulation_broker>False</co_simulation_broker>
+      <id_region_nest>[1,2]</id_region_nest>
+      <synchronization>3.5</synchronization>
+      <gather>False</gather>
+      <scatter>False</scatter>
+    </co_simulation>
+    <nest>
+      <topology>100</topology>
+      <multimeter>False</multimeter>
+      <record_spike>False</record_spike>
+    </nest>
+  </co_simulation_parameters>
+</settings>
