@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<settings>
+  <co_simulation_plan>
+    <title>NEST simulation</title>
+    <description>Running Zerlaut NEST simulation on local system</description>
+    <label>brain co-simulation</label>
+    <execution_environment>Local</execution_environment>
+    <action_plan>
+      <action_000>
+        <action>zerlaut_parameters.xml</action>
+        <number_processes_to_launch>1</number_processes_to_launch>
+        <execution_mode>synchronous</execution_mode>
+      </action_000>
+      <action_001>
+        <action>zerlaut_nest.xml</action>
+        <number_virtual_processes>1</number_virtual_processes> <!-- VP for NEST -->
+        <number_processes_to_launch>1</number_processes_to_launch> <!-- to be used by mpirun/srun -->
+        <execution_mode>synchronous</execution_mode>
+      </action_001>
+    </action_plan>
+  </co_simulation_plan>
+</settings>
